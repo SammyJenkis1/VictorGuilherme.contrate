@@ -18,12 +18,7 @@ padding:80px 10%;
 min-height:100vh;
 gap:40px;
 }
-@media(max-width:600px){
-  header{
-    padding:40px 6%;
-    min-height:auto;
-  }
-}
+
 /* INFO */
 .info{max-width:600px}
 .info h1{font-size:3.2rem}
@@ -37,6 +32,7 @@ content:'';
 position:absolute;
 width:360px;
 height:360px;
+background:radial-gradient(circle,#6c63ff,#00c6ff);
 filter:blur(130px);
 opacity:.6;
 top:50%;
@@ -44,13 +40,13 @@ left:50%;
 transform:translate(-50%,-50%);
 z-index:0;
 }
-@media(max-width:600px){
-  .photo img{
-    width:240px;
-  }
+.photo img{
+width:380px;
+position:relative;
+z-index:1;
 }
 
-/* CONTAGEM CIRCULAR */
+/* CONTAGEM */
 .stats{
 display:flex;
 gap:40px;
@@ -153,7 +149,7 @@ box-shadow:0 20px 40px rgba(0,0,0,.15);
 
 /* HISTÓRIA */
 .historia{
-  height:100vh;
+min-height:100vh;
 background:url('minhahistoria.jpg') center/cover no-repeat;
 display:flex;
 align-items:flex-end;
@@ -191,10 +187,33 @@ transition:.3s;
 
 .contato a:hover{transform:scale(1.08)}
 
+/* RESPONSIVO */
 @media(max-width:900px){
-header{flex-direction:column;text-align:center}
-.photo img{margin-top:40px}
+header{
+flex-direction:column;
+text-align:center;
+padding:50px 6%;
+min-height:auto;
+}
+
+.photo img{width:260px;margin-top:30px}
+
 .stats{justify-content:center}
+}
+
+@media(max-width:600px){
+.info h1{font-size:2.3rem}
+.info h2{font-size:1.1rem}
+
+.photo img{width:220px}
+
+.historia{
+padding:20px;
+}
+
+.historia-card{
+max-width:100%;
+}
 }
 </style>
 </head>
@@ -252,7 +271,7 @@ Tenho experiência em suporte operacional na SIGA Sul Rastreamento, formação t
 <div class="card">
 <img src="https://storage.googleapis.com/ecdt-logo-saida/fe5e2eac0012c396fcae3325b3ad4202be19a5ea0bee9899ef40e9ab24cf9880/SIGASUL.webp">
 <h3>SIGA Sul Rastreamento</h3>
-<p>Suporte Operacional & Facilitador de agendas</p>
+<p>Suporte Operacional & Agendamento</p>
 </div>
 
 <div class="card">
@@ -272,13 +291,11 @@ Tenho experiência em suporte operacional na SIGA Sul Rastreamento, formação t
 <section>
 <h2>Conhecimentos</h2>
 <div class="knowledge">
-
 <div class="know-card"><h3>Astronomia</h3><p>Estudo autodidata do universo.</p></div>
 <div class="know-card"><h3>Mecânica Industrial</h3><p>Formação técnica pelo SENAI.</p></div>
 <div class="know-card"><h3>Programação</h3><p>Sistemas e desenvolvimento web.</p></div>
 <div class="know-card"><h3>Tecnologia 4.0</h3><p>Ferramentas Google.</p></div>
 <div class="know-card"><h3>Vendas & Comunicação</h3><p>Consultor de vendas.</p></div>
-
 </div>
 </section>
 
