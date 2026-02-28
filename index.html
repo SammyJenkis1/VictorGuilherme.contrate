@@ -18,7 +18,12 @@ padding:80px 10%;
 min-height:100vh;
 gap:40px;
 }
-
+@media(max-width:600px){
+  header{
+    padding:40px 6%;
+    min-height:auto;
+  }
+}
 /* INFO */
 .info{max-width:600px}
 .info h1{font-size:3.2rem}
@@ -32,7 +37,6 @@ content:'';
 position:absolute;
 width:360px;
 height:360px;
-background:radial-gradient(circle,#6c63ff,#00c6ff);
 filter:blur(130px);
 opacity:.6;
 top:50%;
@@ -40,10 +44,10 @@ left:50%;
 transform:translate(-50%,-50%);
 z-index:0;
 }
-.photo img{
-width:380px;
-position:relative;
-z-index:1;
+@media(max-width:600px){
+  .photo img{
+    width:240px;
+  }
 }
 
 /* CONTAGEM CIRCULAR */
@@ -149,7 +153,7 @@ box-shadow:0 20px 40px rgba(0,0,0,.15);
 
 /* HISTÓRIA */
 .historia{
-height:100vh;
+  height:100vh;
 background:url('minhahistoria.jpg') center/cover no-repeat;
 display:flex;
 align-items:flex-end;
@@ -248,7 +252,7 @@ Tenho experiência em suporte operacional na SIGA Sul Rastreamento, formação t
 <div class="card">
 <img src="https://storage.googleapis.com/ecdt-logo-saida/fe5e2eac0012c396fcae3325b3ad4202be19a5ea0bee9899ef40e9ab24cf9880/SIGASUL.webp">
 <h3>SIGA Sul Rastreamento</h3>
-<p>Suporte Operacional & Agendamento</p>
+<p>Suporte Operacional & Facilitador de agendas</p>
 </div>
 
 <div class="card">
