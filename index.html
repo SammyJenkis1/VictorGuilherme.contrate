@@ -1,291 +1,314 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Victor Guilherme Pedrozo | Portfólio</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-body{background:#fff;color:#111;overflow-x:hidden}
-
-/* HEADER */
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:80px 10%;
-min-height:100vh;
-gap:40px;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
 
-/* INFO */
-.info{max-width:600px}
-.info h1{font-size:3.2rem}
-.info h2{font-size:1.4rem;color:#6c63ff;margin:10px 0}
-.info p{margin-top:20px;line-height:1.7;color:#444}
+body{
+background:#fff;
+color:#111;
+overflow-x:hidden;
+}
 
-/* FOTO COM LUZ */
-.photo{position:relative}
+/* HERO */
+header{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:60px 8%;
+}
+
+.hero{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:60px;
+width:100%;
+max-width:1200px;
+}
+
+.info{
+max-width:550px;
+}
+
+.info h1{
+font-size:3.2rem;
+font-weight:800;
+}
+
+.info h2{
+font-size:1.5rem;
+color:#555;
+margin:10px 0;
+}
+
+.info p{
+margin-top:15px;
+font-size:1.1rem;
+line-height:1.7;
+color:#333;
+}
+
+/* FOTO */
+.photo{
+position:relative;
+}
+
 .photo::before{
-content:'';
+content:"";
 position:absolute;
-width:360px;
-height:360px;
-background:radial-gradient(circle,#6c63ff,#00c6ff);
+width:420px;
+height:420px;
+background:radial-gradient(circle,#4f9cff,#ffffff);
 filter:blur(130px);
-opacity:.6;
+z-index:-1;
 top:50%;
 left:50%;
 transform:translate(-50%,-50%);
-z-index:0;
-}
-.photo img{
-width:380px;
-position:relative;
-z-index:1;
 }
 
-/* CONTAGEM */
+.photo img{
+width:380px;
+}
+
+/* CONTADORES */
 .stats{
 display:flex;
-gap:40px;
-margin-top:50px;
+gap:25px;
+margin-top:35px;
 flex-wrap:wrap;
 }
 
 .stat{
-position:relative;
-width:160px;
-height:200px;
+background:#f5f5f5;
+border-radius:20px;
+padding:25px;
+width:170px;
 text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,.05);
 }
-
-.stat svg{
-width:140px;
-height:140px;
-transform:rotate(-90deg);
-}
-
-.stat circle{
-fill:none;
-stroke:#eee;
-stroke-width:10;
-}
-
-.stat circle:nth-child(2){
-stroke-linecap:round;
-stroke-dasharray:377;
-stroke-dashoffset:377;
-transition:1.5s;
-}
-
-#circleExp{stroke:#6c63ff}
-#circleKnow{stroke:#00c6ff}
-#circleCourses{stroke:#ff7a18}
 
 .stat h3{
-position:absolute;
-top:45px;
-left:50%;
-transform:translateX(-50%);
-font-size:2rem;
+font-size:2.2rem;
+color:#4f9cff;
 }
 
-.stat p{
-margin-top:10px;
-font-size:.9rem;
-color:#555;
+.stat span{
+font-size:1rem;
+color:#444;
 }
 
 /* SEÇÕES */
-section{padding:80px 10%}
-section h2{text-align:center;font-size:2.3rem;margin-bottom:50px}
+section{
+padding:80px 10%;
+}
+
+section h2{
+text-align:center;
+margin-bottom:30px;
+font-size:2.2rem;
+}
 
 /* EXPERIÊNCIA */
-.experiencias{
+.cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
 }
 
 .card{
-background:#fff;
-border-radius:18px;
-padding:25px;
-box-shadow:0 5px 20px rgba(0,0,0,.08);
-transition:.3s;
-text-align:center;
-}
-
-.card:hover{transform:translateY(-10px)}
-.card img{width:60px;margin-bottom:15px}
-.card h3{color:#6c63ff}
-
-/* CONHECIMENTOS */
-.knowledge{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:30px;
-}
-
-.know-card{
-background:linear-gradient(135deg,#f5f7ff,#ffffff);
+background:#f7f7f7;
 padding:30px;
 border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,.1);
+box-shadow:0 10px 25px rgba(0,0,0,.05);
+font-size:1.05rem;
 text-align:center;
-transition:.4s;
-font-size:1.1rem;
+transition:.3s;
 }
 
-.know-card:hover{
-transform:translateY(-12px) scale(1.03);
-box-shadow:0 20px 40px rgba(0,0,0,.15);
+.card:hover{
+transform:translateY(-8px);
 }
 
-.know-card h3{margin:15px 0;color:#6c63ff}
-.know-card p{font-size:.9rem;color:#555}
+.card img{
+width:70px;
+margin-bottom:15px;
+}
 
 /* HISTÓRIA */
 .historia{
+position:relative;
+background:url("minhahistoria.jpg") center/cover no-repeat;
 min-height:100vh;
-background:url('minhahistoria.jpg') center/cover no-repeat;
 display:flex;
 align-items:flex-end;
-padding:40px;
+padding:60px;
 }
 
 .historia-card{
-background:rgba(255,255,255,.92);
+background:rgba(255,255,255,.9);
+padding:35px;
+border-radius:20px;
+max-width:420px;
+font-size:1.05rem;
+}
+
+/* CURSOS */
+.cursos{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.curso{
+background:#f3f3f3;
 padding:30px;
 border-radius:20px;
-max-width:500px;
+font-size:1.05rem;
 }
 
 /* CONTATO */
 .contato{
-display:flex;
-justify-content:center;
-gap:30px;
-flex-wrap:wrap;
-margin-top:40px;
+text-align:center;
+padding-bottom:100px;
 }
 
 .contato a{
-text-decoration:none;
-color:#fff;
-padding:15px 35px;
+display:inline-block;
+margin:10px;
+padding:18px 40px;
 border-radius:50px;
-font-weight:bold;
+background:#4f9cff;
+color:#fff;
+text-decoration:none;
+font-size:1.1rem;
 transition:.3s;
 }
 
-.whats{background:#25D366}
-.insta{background:#E1306C}
-.linkedin{background:#0A66C2}
+.contato a:hover{
+transform:scale(1.05);
+}
 
-.contato a:hover{transform:scale(1.08)}
+/* MOBILE */
+@media(max-width:768px){
 
-/* RESPONSIVO */
-@media(max-width:900px){
-header{
+.hero{
 flex-direction:column;
 text-align:center;
-padding:50px 6%;
-min-height:auto;
+gap:40px;
 }
 
-.photo img{width:300px;margin-top:30px}
-
-.stats{justify-content:center}
+.photo img{
+width:320px;
 }
 
-@media(max-width:600px){
+.photo::before{
+width:320px;
+height:320px;
+filter:blur(110px);
+}
 
-.info h1{font-size:2.6rem}
-.info h2{font-size:1.2rem}
-.info p{font-size:1rem}
+.stats{
+justify-content:center;
+}
 
-.photo img{width:320px}
-.photo::before{width:320px;height:320px;filter:blur(120px)}
+.stat{
+width:160px;
+}
 
-.stat{width:150px;height:200px}
-.stat h3{font-size:1.9rem}
+.historia{
+padding:30px;
+}
 
-.historia{padding:25px}
-.historia-card{max-width:100%}
+.historia-card{
+font-size:1rem;
+}
+}
+
+/* MOBILE PEQUENO */
+@media(max-width:480px){
+
+.info h1{
+font-size:2.5rem;
+}
+
+.photo img{
+width:280px;
+}
+
+.stat{
+width:150px;
+}
 
 .contato a{
-width:100%;
-text-align:center;
-padding:18px;
-font-size:1rem;
+width:90%;
 }
 }
 </style>
 </head>
-
 <body>
 
 <header>
+<div class="hero">
+
 <div class="info">
 <h1>Victor Guilherme Pedrozo</h1>
-<h2>Estudante | Astronomia • Mecânica • Programação</h2>
+<h2>Estudante | Astronomia, Mecânica & Programação</h2>
 <p>
-Tenho experiência em suporte operacional na SIGA Sul tecnologia para frotas, formação técnica pelo SENAI em mecânica e programação, e sou entusiasta autodidata em astronomia.
+Tenho experiência em suporte operacional na SIGA Sul Rastreamento, formação técnica pelo SENAI em mecânica e programação, e sou entusiasta autodidata em astronomia. Busco soluções inovadoras e crescimento profissional.
 </p>
 
 <div class="stats">
-
 <div class="stat">
-<svg>
-<circle cx="70" cy="70" r="60"></circle>
-<circle cx="70" cy="70" r="60" id="circleExp"></circle>
-</svg>
-<h3 id="exp">0</h3>
-<p>Anos de Experiência</p>
+<h3 id="anos">0+</h3>
+<span>Anos de Experiência</span>
 </div>
 
 <div class="stat">
-<svg>
-<circle cx="70" cy="70" r="60"></circle>
-<circle cx="70" cy="70" r="60" id="circleKnow"></circle>
-</svg>
-<h3 id="know">0</h3>
-<p>Áreas de Conhecimento</p>
+<h3>5+</h3>
+<span>Cursos</span>
 </div>
 
 <div class="stat">
-<svg>
-<circle cx="70" cy="70" r="60"></circle>
-<circle cx="70" cy="70" r="60" id="circleCourses"></circle>
-</svg>
-<h3 id="courses">0</h3>
-<p>Cursos</p>
+<h3>4+</h3>
+<span>Áreas de Conhecimento</span>
 </div>
-
 </div>
 </div>
 
 <div class="photo">
 <img src="victor.png" alt="Victor">
 </div>
+
+</div>
 </header>
 
 <section>
-<h2>Experiência Profissional</h2>
-<div class="experiencias">
+<h2>Experiências</h2>
+<div class="cards">
+
 <div class="card">
 <img src="https://storage.googleapis.com/ecdt-logo-saida/fe5e2eac0012c396fcae3325b3ad4202be19a5ea0bee9899ef40e9ab24cf9880/SIGASUL.webp">
-<h3>SIGA Sul Tecnologia para frotas</h3>
-<p>Suporte Operacional & Facilitador de agendas</p>
+<h3>SIGA Sul Rastreamento</h3>
+<p>Suporte Operacional & Agendamento</p>
 </div>
 
 <div class="card">
 <img src="https://logopng.com.br/logos/senai-165.png">
 <h3>SENAI</h3>
-<p>Jovem Aprendiz em Mecânica e Programação | 2 anos</p>
+<p>Jovem Aprendiz em Mecânica e Programação (2 anos)</p>
 </div>
 
 <div class="card">
@@ -293,17 +316,7 @@ Tenho experiência em suporte operacional na SIGA Sul tecnologia para frotas, fo
 <h3>Cacau Show</h3>
 <p>Consultor de Vendas</p>
 </div>
-</div>
-</section>
 
-<section>
-<h2>Conhecimentos</h2>
-<div class="knowledge">
-<div class="know-card"><h3>Astronomia</h3><p>Estudo autodidata do universo.</p></div>
-<div class="know-card"><h3>Mecânica Industrial</h3><p>Formação técnica pelo SENAI.</p></div>
-<div class="know-card"><h3>Programação</h3><p>Sistemas e desenvolvimento web.</p></div>
-<div class="know-card"><h3>Tecnologia 4.0</h3><p>Ferramentas Google.</p></div>
-<div class="know-card"><h3>Vendas & Comunicação</h3><p>Consultor de vendas.</p></div>
 </div>
 </section>
 
@@ -311,42 +324,45 @@ Tenho experiência em suporte operacional na SIGA Sul tecnologia para frotas, fo
 <div class="historia-card">
 <h2>Minha História</h2>
 <p>
-Desde 2023 venho construindo minha trajetória unindo tecnologia, mecânica e curiosidade pelo universo. Cada experiência fortaleceu meu compromisso com evolução constante.
+Minha jornada começou em 2023 com a formação em Mecânica Industrial pelo SENAI, onde desenvolvi disciplina, responsabilidade e paixão pela tecnologia.  
+Com o tempo, expandi meus estudos para a Programação e a Astronomia, unindo conhecimento técnico com curiosidade científica.  
+
+Cada experiência profissional fortaleceu minha visão de futuro: crescer constantemente, buscar inovação e contribuir com soluções inteligentes onde eu atuar.
 </p>
 </div>
 </section>
 
-<section style="margin-top:120px;">
-<h2>Contato</h2>
-<div class="contato">
-<a class="whats" href="https://wa.me/5549999713852">WhatsApp</a>
-<a class="insta" href="https://instagram.com/victorguilhermep">Instagram</a>
-<a class="linkedin" href="https://linkedin.com/in/victor-pedrozo">LinkedIn</a>
+<section>
+<h2>Cursos & Formação</h2>
+<div class="cursos">
+<div class="curso">Mecânica Industrial – SENAI</div>
+<div class="curso">Programador de Sistemas – SENAI</div>
+<div class="curso">Vendedor Especialista – Cacau Show</div>
+<div class="curso">Revendedores VD – Cacau Show</div>
+<div class="curso">Ferramentas Google</div>
+<div class="curso">Tecnologia 4.0</div>
 </div>
 </section>
 
+<section class="contato">
+<h2>Contato</h2>
+<a href="https://wa.me/5549999713852" target="_blank">WhatsApp</a>
+<a href="https://instagram.com/victorguilhermep" target="_blank">Instagram</a>
+<a href="#">LinkedIn</a>
+</section>
+
 <script>
-const anoInicio = 2023;
-const anoAtual = new Date().getFullYear();
-const anos = anoAtual - anoInicio;
+let anos = 0;
+let target = new Date().getFullYear() - 2023;
 
-function animateCircle(circleId, textId, value, max){
-let circle = document.getElementById(circleId);
-let text = document.getElementById(textId);
-let current = 0;
-let offset = 377;
-
-let interval = setInterval(()=>{
-current++;
-text.innerText = current + "+";
-circle.style.strokeDashoffset = offset - (offset * current / max);
-if(current >= value) clearInterval(interval);
-},80);
+let counter = setInterval(()=>{
+if(anos < target){
+anos++;
+document.getElementById("anos").innerText = anos + "+";
+}else{
+clearInterval(counter);
 }
-
-animateCircle("circleExp","exp",anos,5);
-animateCircle("circleKnow","know",3,5);
-animateCircle("circleCourses","courses",5,8);
+},800);
 </script>
 
 </body>
